@@ -3,7 +3,7 @@
 Personal portfolio website built with HTML, CSS, and JavaScript.
 
 ## Live Site
-https://juliakasperek.github.io
+https://juliakasperek.github.io/Portfolio
 
 ## Built With
 - HTML
