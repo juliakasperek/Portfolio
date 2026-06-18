@@ -1,2 +1,20 @@
-# Portfolio
-Personal portfolio website built with HTML, CSS and JavaScript
+# Julia Kasperek – Portfolio
+
+Personal portfolio website built with HTML, CSS, and JavaScript.
+
+## Live Site
+https://juliakasperek.github.io
+
+## Built With
+- HTML
+- CSS
+- JavaScript
+
+## Sections
+- Home
+- About
+- Education
+- Experience
+- Projects
+- Skills
+- Contact
