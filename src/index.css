@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #FFF4E8;
+  --color-paper: #FFFFFF;
+  --color-ink: #1A1027;
+  --color-ink-soft: #4A3F57;
+  --color-pink: #FF4FA0;
+  --color-blush: #FFC2DD;
+  --color-yellow: #FFD23F;
+  --color-blue: #5B7CFF;
+  --color-mint: #3DDC97;
+
+  --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --shadow-pop: 6px 6px 0 0 var(--color-ink);
+  --shadow-pop-sm: 3px 3px 0 0 var(--color-ink);
+  --shadow-pop-lg: 10px 10px 0 0 var(--color-ink);
+
+  --animate-marquee: marquee 28s linear infinite;
+  --animate-spin-slow: spin 14s linear infinite;
+  --animate-wiggle: wiggle 2.4s ease-in-out infinite;
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @keyframes wiggle {
+    0%, 100% { transform: rotate(-6deg); }
+    50% { transform: rotate(6deg); }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
+  body {
+    @apply bg-cream text-ink font-sans antialiased;
+    /* subtle dotted paper texture */
+    background-image: radial-gradient(color-mix(in srgb, var(--color-ink) 12%, transparent) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+  ::selection {
+    @apply bg-pink text-ink;
+  }
+  :focus-visible {
+    outline: 3px solid var(--color-blue);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+}
+
+@utility card {
+  @apply rounded-3xl border-[3px] border-ink bg-paper shadow-pop;
+}
+
+@utility pill {
+  @apply inline-flex items-center gap-1.5 rounded-full border-2 border-ink px-3 py-1 text-sm font-semibold;
+}
+
+@utility btn {
+  @apply inline-flex items-center gap-2 rounded-full border-[3px] border-ink px-6 py-3 font-display text-lg font-bold shadow-pop transition-[transform,box-shadow] duration-150 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-pop-lg active:translate-x-1 active:translate-y-1 active:shadow-none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
