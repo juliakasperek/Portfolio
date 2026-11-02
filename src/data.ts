@@ -79,12 +79,26 @@ export type Job = {
 
 export const experience: Job[] = [
   {
+    title: 'Cybersecurity Research Contributor',
+    org: 'Riipen LevelUp · Dinosty Fossils',
+    where: 'Remote',
+    when: 'Oct 2026 – Present',
+    current: true,
+    points: [
+      'Collaborating on a 3-student team to develop a structured security and spoofing assessment framework for a proposed Ammolite-based optical authentication system.',
+      'Modelling the authentication workflow — enrolment, image capture, storage, comparison, and verification — and identifying assets, trust boundaries, threat actors, and security assumptions.',
+      'Building an attack taxonomy of copying, manipulation, replay, and substitution risks, ranked by practical difficulty, required equipment, cost, and security impact.',
+      'Developing modular scripts that simulate digital spoofing and image-manipulation attacks on open-license and simulated images, designed to be reused with a future controlled Ammolite dataset.',
+    ],
+  },
+  {
     title: 'IT Intern',
     org: 'GUS Canada',
     where: 'Hybrid',
     when: 'Aug 2026 – Present',
     current: true,
     points: [
+      'Building a web application with Lovable and Supabase, deployed on Vercel through a GitHub-based CI/CD pipeline.',
       'Gaining hands-on experience with hardware setup and computer imaging, preparing classroom devices for student use and running readiness checks for exam environments.',
       'Supporting Tier 1 IT operations by troubleshooting technical issues for students and staff and learning enterprise helpdesk workflows.',
       'Building foundational knowledge of enterprise networking and cybersecurity alongside IT professionals across a multi-campus organization.',
@@ -127,10 +141,11 @@ export const experience: Job[] = [
     title: 'Director of Events',
     org: "Students Fight Parkinson's Club, Western University",
     where: 'London, ON',
-    when: 'Sep 2025 – Apr 2026',
+    when: 'Sep 2025 – Present',
+    current: true,
     points: [
-      "Planned and ran four to six events per semester for a 100+ member organization focused on Parkinson's awareness and fundraising.",
-      'Organized collaborative events with other campus clubs, managing logistics, timelines, and communication between multiple stakeholders.',
+      "Planning and running four to six events per semester for a 100+ member organization focused on Parkinson's awareness and fundraising.",
+      'Organizing collaborative events with other campus clubs, managing logistics, timelines, and communication between multiple stakeholders.',
     ],
   },
   {
@@ -206,12 +221,16 @@ export const skills = [
   { name: 'CSS', icon: img('css3.svg') },
   { name: 'MySQL', icon: img('mysql.svg') },
   { name: 'PostgreSQL', icon: img('postgresql.svg') },
+  { name: 'Supabase', icon: img('supabase.svg') },
   { name: 'Git', icon: img('git.svg') },
   { name: 'GitHub', icon: img('github.svg') },
+  { name: 'GitHub Actions', icon: img('github-actions.svg') },
+  { name: 'Vercel', icon: img('vercel.svg') },
 ]
 
 export const marquee = [
   'Software Development',
+  'Cybersecurity',
   'Team Leadership',
   'Full-Stack Apps',
   'Clean Code',

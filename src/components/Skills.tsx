@@ -22,7 +22,7 @@ export default function Skills() {
             go on, drag them ✋
           </p>
         )}
-        <ul className="grid grid-cols-3 gap-4 sm:grid-cols-4 lg:grid-cols-6">
+        <ul className="grid grid-cols-3 gap-4 sm:grid-cols-5">
           {skills.map((s, i) => (
             <motion.li
               key={s.name}
